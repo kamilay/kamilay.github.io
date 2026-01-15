@@ -1,0 +1,286 @@
+/* =========================================================
+   Global Reset & Base
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #1f3c88;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   Header
+========================================================= */
+
+header {
+  position: relative;
+  height: 360px;
+  background: linear-gradient(135deg, #1f3c88, #0b1f44);
+  color: #fff;
+  overflow: hidden;
+}
+
+header.small {
+  height: 220px;
+}
+
+header .context {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 60px;
+}
+
+header .img-round {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+}
+
+header .img-round img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+header.small h1 {
+  font-size: 36px;
+}
+
+header .icons {
+  margin-top: 15px;
+}
+
+header .icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 18px;
+}
+
+header .icons a:hover {
+  color: #cdd9ff;
+}
+
+/* =========================================================
+   Animated Background Circles
+========================================================= */
+
+.area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.circles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+/* =========================================================
+   Navigation Menu
+========================================================= */
+
+nav.menu {
+  background: #f5f7fb;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-1 {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.menu-1 ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-1 ul li {
+  margin: 0 20px;
+}
+
+.menu-1 ul li a {
+  display: block;
+  padding: 15px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.menu-1 ul li a.active,
+.menu-1 ul li a:hover {
+  color: #1f3c88;
+  border-bottom: 2px solid #1f3c88;
+}
+
+/* =========================================================
+   Article / Main Content
+========================================================= */
+
+article {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+article h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1f3c88;
+}
+
+article p {
+  font-size: 17px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+article ul {
+  margin-left: 25px;
+}
+
+article ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* =========================================================
+   Contact Box
+========================================================= */
+
+.contact {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.contact b {
+  font-size: 16px;
+}
+
+/* =========================================================
+   Publications
+========================================================= */
+
+.pub-list {
+  margin: 30px 0;
+  padding-left: 25px;
+}
+
+.pub-list li {
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.pub-list p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.pub-list b {
+  color: #000;
+}
+
+.pub-list i {
+  color: #2c5aa0;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 10px;
+  font-size: 13px;
+  border-radius: 12px;
+  background-c
